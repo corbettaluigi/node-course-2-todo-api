@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TodoApp');
+if (process.env.PORT) {
+  var dbUri = 'mongodb://lcdbuser:lc123db@ds121534.mlab.com:21534/lcdb';
+} else {
+  var dbUri = 'mongodb://localhost:27017/TodoApp';
+}
+
+mongoose.connect(dbUri);
 
 module.exports = {mongoose};
