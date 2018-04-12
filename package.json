@@ -10,7 +10,7 @@
   },
   "engines": {
     "node":"9.8.0"
-  }
+  },
   "author": "Luigi",
   "license": "ISC",
   "dependencies": {
