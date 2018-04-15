@@ -7,7 +7,7 @@ mongoose.Promise = global.Promise;
 //   var dbUri = 'mongodb://localhost:27017/TodoApp';
 // }
 
-var dbUri = process.env.DBURI || 'mongodb://localhost:27017/TodoApp';
+var dbUri = process.env.DBURI;
 mongoose.connect(dbUri);
 
 module.exports = {mongoose};
